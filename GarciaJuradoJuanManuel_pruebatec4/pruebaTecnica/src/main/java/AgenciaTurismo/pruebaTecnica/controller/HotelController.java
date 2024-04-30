@@ -19,12 +19,16 @@ import java.util.List;
 @RequestMapping("/agency")
 public class HotelController {
 
+    //Inyeccion de dependencias
     @Autowired
     private IHotelService hotelServ;
 
     @Autowired
     private IRoomService roomService;
 
+    //-----------------------------------Hotels-----------------------------------
+
+    //CRUD para los hoteles. CRUD for hotels
     @GetMapping("/hotels")
     public List<Hotel> getHotels() {//Solo se puede acceder estando autorizado. Only authorized access
 
@@ -72,30 +76,30 @@ public class HotelController {
         return hotelDto;
     }
 
-
-
-
     @DeleteMapping("/hotels/delete/{id}")
     public ResponseEntity<HttpStatus> deleteHotel(@PathVariable Long id) {
         hotelServ.deleteHotel(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-
+    //-----------------------------------Rooms-----------------------------------
     //CRUD para las habitaciones de los hoteles. CRUD for hotel rooms
 
+    //Crear una habitacion en un hotel. Create a room in a hotel
     @PostMapping("/hotels/rooms/new")//Crear una habitacion en un hotel. Create a room in a hotel
     public ResponseEntity<Void> createRoom(@RequestBody NewRoomDTO room) {
         roomService.saveRoom(room);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
+    //Eliminar una habitacion por su id. Delete a room by its id
     @DeleteMapping("/hotels/rooms/delete/{id}")//Eliminar una habitacion por su id. Delete a room by its id
     public ResponseEntity<Void> deleteRoom(@PathVariable Long id) {
         roomService.deleteRoom(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
+    //Obtener una habitacion por su id. Get a room by its id
     @PutMapping("/hotels/rooms/edit/{id}")//Editar una habitacion por su id. Edit a room by its id
     public ResponseEntity<Void> updateRoom(
             @PathVariable Long id,
@@ -121,9 +125,21 @@ public class HotelController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    //Obtener todas las habitaciones. Get all rooms
     @GetMapping("/hotels/rooms")
     public List<Room> getRooms() {
+
         return roomService.getRooms();
+    }
+
+    //Obtener listado de habitaciones por un rango de fechas y ciudad. Get a list of rooms by date range and city
+    @GetMapping("/rooms")
+    public List<Room> getAvailableRooms(
+            @DateTimeFormat(pattern = "dd-MM-yyyy") @RequestParam("dateFrom") Date availableFrom,
+            @DateTimeFormat(pattern = "dd-MM-yyyy") @RequestParam("dateTo") Date availableTo,
+            @RequestParam("roomType") String roomType,
+            @RequestParam("destination") String city) {
+        return roomService.getAvailableRooms(availableFrom, availableTo, roomType, city);
     }
 
 

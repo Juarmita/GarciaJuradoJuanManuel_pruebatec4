@@ -1,7 +1,7 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(à‘ßæüÿÿÿÿ8™Ëº­ò1J$20bb3277-c8a6-4fbe-84a5-943bc799fb24
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(à‘ßæüÿÿÿÿ8¢ú­Õò1J$79a364d5-5eb7-4692-b7e6-ef89e9305354
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8¨Ëº­ò1J$e8483204-dd2c-4afc-b0ff-80f686c93a32
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8ºú­Õò1J$973c050d-4a76-4591-80c1-ef8163a51013
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8¨Ëº­ò1J$20683908-cb8e-4abf-820d-ba74606f3f31
-r	java:S106*"+Replace this use of System.out by a logger.(‹’±™ýÿÿÿÿ8®Ëº­ò1J$30fc365b-d2a1-4b5b-b412-28b3b5acfc50
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8ºú­Õò1J$d42b205a-6da0-48ba-b81e-476cf5c89c2e
+r	java:S106."+Replace this use of System.out by a logger.(‹’±™ýÿÿÿÿ8Åú­Õò1J$420feb2a-1c09-4f86-88f1-f88e62f6e25a

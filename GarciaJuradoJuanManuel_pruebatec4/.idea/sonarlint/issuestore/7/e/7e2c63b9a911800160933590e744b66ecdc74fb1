@@ -1,0 +1,11 @@
+
+g	java:S112&"FDefine and throw a dedicated exception instead of using a generic one.(÷Û¢¢ùÿÿÿÿ8¾ÚÍÙò1
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(à‘ßæüÿÿÿÿ8Úºş×ò1J$35e7ce18-7882-4730-86d4-31bd4afa426b
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Şºş×ò1J$57f9f8da-64cf-4dbb-9d94-9dfd40b38c85
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8­«“Øò1J$d7906620-d078-46aa-a2b4-1ea6f2d6c1aa
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8£û“Øò1J$c6f96133-1279-41ac-8010-322be683c658
+C
+java:S1452""&Remove usage of generic wildcard type.(õî’ª8ÈÚÍÙò1
