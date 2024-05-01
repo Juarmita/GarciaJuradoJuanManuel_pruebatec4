@@ -15,6 +15,7 @@ public class HostService implements IHostService {
 
     @Override
     public Hosts getHostById(Long id) {
+        //Logica para obtener un host. Logic to get a host.
         Optional<Hosts> hosts = hostsRepository.findById(id);
         if (hosts.isPresent()) {
             return hosts.get();
@@ -24,7 +25,7 @@ public class HostService implements IHostService {
     }
     @Override
     public void saveHost(Hosts host) {
-        // Logic to save the host
+        //Logica para guardar un host. Logic to save a host.
         hostsRepository.save(host);
     }
 }

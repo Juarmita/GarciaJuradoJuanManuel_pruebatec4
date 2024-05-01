@@ -16,5 +16,5 @@ public interface IRoomService {
     public List<Room> getRooms();//Metodo para obtener todas las habitaciones. Method to get all rooms
 
     List<Room> getAvailableRooms(Date checkInDate, Date checkOutDate, String roomType, String city);
-    //List<Room> getAvailableRooms(Date availableFrom, Date availableTo, String city);
+
 }

@@ -1,16 +1,16 @@
 
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ù¸òû
-c
-java:S5738"HRemove this call to a deprecated method, it has been marked for removal.(Í‹Üúşÿÿÿÿ
-^
-java:S5738"HRemove this call to a deprecated method, it has been marked for removal.(ÏğÅô
-c
-java:S5738"HRemove this call to a deprecated method, it has been marked for removal.(Åúßµûÿÿÿÿ
-^
-java:S5738"HRemove this call to a deprecated method, it has been marked for removal.(½™§º
-c
-java:S5738"HRemove this call to a deprecated method, it has been marked for removal.(Åúßµûÿÿÿÿ
-]
-java:S5738"HRemove this call to a deprecated method, it has been marked for removal.(‡’8
-c
-java:S5738"HRemove this call to a deprecated method, it has been marked for removal.(Åúßµûÿÿÿÿ
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ù¸òûJ$12111641-663a-45de-8445-ffb93d6368ea
+‰
+java:S5738"HRemove this call to a deprecated method, it has been marked for removal.(Í‹ÜúşÿÿÿÿJ$26fcf1c8-b9e7-45f3-b30e-bcf190b96b0b
+„
+java:S5738"HRemove this call to a deprecated method, it has been marked for removal.(ÏğÅôJ$bbce7d63-007c-4a50-8f37-c70579e59fe3
+‰
+java:S5738"HRemove this call to a deprecated method, it has been marked for removal.(ÅúßµûÿÿÿÿJ$f7719e0c-d091-4f6a-b31d-773eac5982c0
+„
+java:S5738"HRemove this call to a deprecated method, it has been marked for removal.(½™§ºJ$7c5c6a4f-90e6-465c-9545-fce493be7d3d
+‰
+java:S5738"HRemove this call to a deprecated method, it has been marked for removal.(ÅúßµûÿÿÿÿJ$ac5802e4-4a36-4359-94fa-7db3c29d92ea
+ƒ
+java:S5738 "HRemove this call to a deprecated method, it has been marked for removal.(‡’8J$8c81f05f-ea61-405f-bd18-83e86eb7e1ee
+‰
+java:S5738!"HRemove this call to a deprecated method, it has been marked for removal.(ÅúßµûÿÿÿÿJ$0443abc5-09f7-45ac-b60f-cd0f6246e82b

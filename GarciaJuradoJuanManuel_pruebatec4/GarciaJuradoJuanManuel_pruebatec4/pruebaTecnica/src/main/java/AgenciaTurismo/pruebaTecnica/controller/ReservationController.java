@@ -13,10 +13,12 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
-@RequestMapping(value = "/agency", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/agency", produces = MediaType.APPLICATION_JSON_VALUE)//Indico que el controlador solo devolvera JSON. I indicate that the controller will only return JSON.
 public class ReservationController {
 
     @Autowired
@@ -69,14 +71,25 @@ public class ReservationController {
             // Guardar la reserva. Save the reservation.
             roomReservationService.saveRoomReservation(roomReservation);
 
-            // Retornar la reserva creada. Return the created reservation.
-            return new ResponseEntity<>(roomReservation, HttpStatus.CREATED);
+            //Calcula el costo total. Calculate the total cost
+            long diff = bookingDto.getCheckOutDate().getTime() - bookingDto.getCheckInDate().getTime();
+            double totalCost = diff * room.getPricePerNight();
+
+            //Creo un objeto de respuesta. Create a response object.
+            Map<String, Object> response = new HashMap<>();
+                    response.put("reservation", roomReservation);
+                    response.put("totalCost", totalCost);
+
+
+            // Retornar la reserva creada con el coste. Return the created reservation with the cost.
+            return new ResponseEntity<>(response, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
         }
     }
 
     @DeleteMapping(value = "/room-booking/delete/{id}")
+    //Eliminar una reserva por su id. Delete a reservation by its id
     public ResponseEntity<?> deleteBooking(@PathVariable Long id) {
         if (roomReservationService.existsRoomReservation(id)) {
             try {

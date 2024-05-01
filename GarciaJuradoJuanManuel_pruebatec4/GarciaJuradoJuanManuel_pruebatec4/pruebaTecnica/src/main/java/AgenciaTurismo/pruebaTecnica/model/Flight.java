@@ -27,7 +27,7 @@ public class Flight implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date departureDate;
 
-    @Column(name = "return_date")
+    @Column(name = "return_date")//Se define el nombre de la columna. The name of the column is defined.
     @Temporal(TemporalType.DATE)
     private Date returnDate;
     private Integer seats;

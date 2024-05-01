@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class RoomService implements IRoomService {
@@ -85,14 +86,14 @@ public class RoomService implements IRoomService {
     public List<Room> getAvailableRooms(Date availableFrom, Date availableTo, String city) {
         // Validar las fechas
         if (availableFrom == null || availableTo == null || availableFrom.after(availableTo)) {
-            throw new IllegalArgumentException("Las fechas de disponibilidad son inválidas");
+            throw new IllegalArgumentException("The availability dates are invalid.");
         }
 
         // Buscar habitaciones disponibles en la ciudad para las fechas especificadas
         List<Room> availableRooms = roomRepo.findByHotelCityAndAvailableFromLessThanEqualAndAvailableToGreaterThanEqual(city, availableTo, availableFrom);
-
+        // Si no hay habitaciones disponibles, lanzar una excepción
         if (availableRooms.isEmpty()) {
-            throw new RuntimeException("No hay habitaciones disponibles en la ciudad para las fechas seleccionadas");
+            throw new RuntimeException("No rooms available in " + city + " for the selected dates.");
         }
 
         return availableRooms;
@@ -107,12 +108,9 @@ public class RoomService implements IRoomService {
             throw new RuntimeException("Not rooms found of type: " + roomType + " in " + city + " for the date range selected");
         }
 
-        List<Room> availableRooms = new ArrayList<>();
-        for (Room room : rooms) {
-            if (isRoomAvailable(room, checkInDate, checkOutDate)) {
-                availableRooms.add(room);
-            }
-        }
+        List<Room> availableRooms = rooms.stream()
+                .filter(room -> isRoomAvailable(room, checkInDate, checkOutDate))
+                .collect(Collectors.toList());
 
         if (availableRooms.isEmpty()) {
             throw new RuntimeException("There are no available rooms of type " + roomType + " in the city " + city + " for the selected dates");
@@ -121,13 +119,13 @@ public class RoomService implements IRoomService {
         return availableRooms;
     }
 
+    //Metodo para verificar si una habitacion esta disponible
     private boolean isRoomAvailable(Room room, Date checkInDate, Date checkOutDate) {
         for (RoomReservation reservation : room.getRoomReservation()) {
             if (!checkInDate.after(reservation.getCheckOut()) && !checkOutDate.before(reservation.getCheckIn())) {
                 return false;
             }
         }
-
         return true;
     }
 }

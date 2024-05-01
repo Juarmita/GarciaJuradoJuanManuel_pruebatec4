@@ -28,7 +28,7 @@ public class Hosts {
     private String surname;
     private Integer age;
 
-    @JsonManagedReference(value = "host-reservation")
+    @JsonManagedReference(value = "host-reservation")//Uso de JsonManagedReference para evitar la recursividad. Use of JsonManagedReference to avoid recursion.
     @OneToMany(mappedBy = "hosts")//Relacion de uno a muchos. One to many relationship. Un anfitrion puede tener muchas reservas de habitacion. A host can have many room reservations.
     private List<RoomReservation> roomReservation;//Relacion de uno a muchos. One to many relationship. Un anfitrion puede tener muchas reservas de vuelo. A host can have many flight reservations.
 

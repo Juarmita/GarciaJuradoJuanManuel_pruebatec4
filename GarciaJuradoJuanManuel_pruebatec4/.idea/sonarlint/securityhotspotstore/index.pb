@@ -63,3 +63,11 @@ lGarciaJuradoJuanManuel_pruebatec4/pruebaTecnica/src/test/java/AgenciaTurismo/pr
 mGarciaJuradoJuanManuel_pruebatec4/pruebaTecnica/src/test/java/AgenciaTurismo/pruebaTecnica/NewFlightTest.java,f\1\f104249084b601a5ce1fbda124c9ce4a2aa1527d
 ¤
 tGarciaJuradoJuanManuel_pruebatec4/pruebaTecnica/src/test/java/AgenciaTurismo/pruebaTecnica/FlightControllerTest.java,c\7\c7740addfd36686c52aa87035717435191067aa5
+ª
+zGarciaJuradoJuanManuel_pruebatec4/pruebaTecnica/src/main/java/AgenciaTurismo/pruebaTecnica/repository/HostsRepository.java,e\d\edb5fa46d7f45fbdd6ffd1a6ed360e791e9bc255
+£
+sGarciaJuradoJuanManuel_pruebatec4/pruebaTecnica/src/main/java/AgenciaTurismo/pruebaTecnica/service/HostService.java,d\3\d3b4c9b68baba800741646e4124ec7348f12ee3d
+¤
+tGarciaJuradoJuanManuel_pruebatec4/pruebaTecnica/src/main/java/AgenciaTurismo/pruebaTecnica/service/IHostService.java,7\0\705d2e0afe2c6a33139c6751aa41572b5b62c712
+¤
+tGarciaJuradoJuanManuel_pruebatec4/pruebaTecnica/src/main/java/AgenciaTurismo/pruebaTecnica/service/IRoomService.java,6\0\60429f9cef23f9d5b47521d3e5fad9adb3ca4bd0

@@ -26,14 +26,8 @@ public class HotelController {
     @Autowired
     private IRoomService roomService;
 
-    @Autowired//Inyeccion de dependencias, necesaria en el TEST. Dependency injection, necessary in the TEST
-    public HotelController(IHotelService hotelServ) {
-        this.hotelServ = hotelServ;
-        this.roomService = roomService;
-    }
 
     //-----------------------------------Hotels-----------------------------------
-
     //CRUD para los hoteles. CRUD for hotels
     @GetMapping("/hotels")
     public List<Hotel> getHotels() {//Solo se puede acceder estando autorizado. Only authorized access
@@ -105,9 +99,12 @@ public class HotelController {
     }
 
     //Eliminar una habitacion por su id. Delete a room by its id
-    @DeleteMapping("/hotels/rooms/delete/{id}")//Eliminar una habitacion por su id. Delete a room by its id
+    @DeleteMapping("/hotels/rooms/delete/{id}")
     public ResponseEntity<?> deleteRoom(@PathVariable Long id) {
-
+        Room room = roomService.findById(id);
+        if (room == null) {
+            return new ResponseEntity<>("Room not found", HttpStatus.NOT_FOUND);
+        }
 
         roomService.deleteRoom(id);
         return new ResponseEntity<>("Room deleted", HttpStatus.OK);
@@ -123,13 +120,13 @@ public class HotelController {
             @DateTimeFormat(pattern = "yyyy-MM-dd") @RequestParam("availableTo") Date availableToModif,
             @RequestParam("hotelId") Long hotelIdModif) {
 
-        //Look for the room by id
+        //Buscar la habitacion por su id. Look for the room by id
         Room room = roomService.findById(id);
         if (room == null) {
             return new ResponseEntity<>("Room not found", HttpStatus.NOT_FOUND);
         }
 
-        //Update the room
+        //Actualizar la habitacion. Update the room
         room.setRoomType(roomTypeModif);
         room.setPricePerNight(pricePerNightModif);
         room.setAvailableFrom(availableFromModif);
@@ -140,7 +137,7 @@ public class HotelController {
     }
 
     //Obtener todas las habitaciones. Get all rooms
-    @GetMapping("/hotels/rooms")
+    @GetMapping("/hotels/rooms")//Necesita estar autorizado. Needs to be authorized
     public List<Room> getRooms() {
 
         return roomService.getRooms();
@@ -155,8 +152,4 @@ public class HotelController {
             @RequestParam("destination") String city) {
         return roomService.getAvailableRooms(availableFrom, availableTo, roomType, city);
     }
-
-
-
-
 }
