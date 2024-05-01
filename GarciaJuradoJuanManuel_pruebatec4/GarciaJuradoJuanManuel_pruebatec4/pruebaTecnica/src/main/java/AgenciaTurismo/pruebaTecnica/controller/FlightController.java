@@ -42,13 +42,13 @@ public class FlightController {
     }
 
     //Obtener todos los vuelos. Get all flights
-    @GetMapping("/flights")
+    @GetMapping("/flights")//Hay que estar autorizado para acceder. You must be authorized to access
     public List<Flight> getFlights() {
         return flightService.getFlights();
     }
 
     //Obtener un vuelo por su id. Get a flight by its id
-    @GetMapping("/flights/{id}")
+    @GetMapping("/flights/{id}")//Hay que estar autorizado para acceder. You must be authorized to access
     public Flight findById(@PathVariable Long id) {
         return flightService.findById(id);
     }

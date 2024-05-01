@@ -1,6 +1,6 @@
 
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(÷¼¥’ÿÿÿÿÿJ$d477331e-6cde-42f6-a2cd-75e972c26908
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(÷¼¥’ÿÿÿÿÿJ$c2df0d50-84b2-4ebf-9f60-56154a86718d
 j
-java:S1948,"'Make "hosts" transient or serializable.(ï‘Ä8ŠÎÌñò1J$ccf6e816-d609-4605-83a6-b456acb01943
+java:S1948,"'Make "hosts" transient or serializable.(ï‘Ä8ŠÎÌñò1J$876877f9-7b6a-4a88-9127-ef2980f1fd01
 •
-java:S1128"RRemove this unused import 'com.fasterxml.jackson.annotation.JsonManagedReference'.(Æ˜µ8‰úûğò1J$8e7c4b97-2bd0-4e25-aeb6-eca45b47ab48
+java:S1128"RRemove this unused import 'com.fasterxml.jackson.annotation.JsonManagedReference'.(Æ˜µ8‰úûğò1J$2c7f5cda-d81c-4b5e-b1bb-fc657edc420f

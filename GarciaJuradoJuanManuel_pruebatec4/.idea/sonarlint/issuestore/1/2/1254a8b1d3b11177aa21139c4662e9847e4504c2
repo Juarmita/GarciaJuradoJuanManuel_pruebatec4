@@ -1,12 +1,12 @@
 
-ˆ	java:S112X"FDefine and throw a dedicated exception instead of using a generic one.(¹Üõá8—Ìí‡ó1J$86731a36-df70-4ec7-ac23-ec3a767ac430
+ˆ	java:S112X"FDefine and throw a dedicated exception instead of using a generic one.(¹Üõá8—Ìí‡ó1J$fe285445-a7ad-46a8-bf5a-c8ed7a12ea56
 «
-java:S1488x"cImmediately return this expression instead of assigning it to the temporary variable "bookingDTOs".(šÞˆ¶ÿÿÿÿÿ8ìÄ¯¬ó1J$0e185ec6-66c3-4e40-b92e-5d812ec04596
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(÷ô‹¹þÿÿÿÿ8¿ÔÈ‡ó1J$af43ad85-0721-421a-9750-491fe5a62bcc
+java:S1488x"cImmediately return this expression instead of assigning it to the temporary variable "bookingDTOs".(šÞˆ¶ÿÿÿÿÿ8ìÄ¯¬ó1J$65a4ea50-25ca-4992-8f43-3fa3083901b3
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(÷ô‹¹þÿÿÿÿ8¿ÔÈ‡ó1J$d5a766da-a6ed-4120-9cb6-9a1547a5b5bc
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8ÌÔÈ‡ó1J$d9d48415-61d9-4f42-9001-ec701ba4ade6
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8ÌÔÈ‡ó1J$707fec15-b9aa-4269-8ebb-a301768e1a42
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8‚éå‡ó1J$293ef0ac-ec13-4e68-a06d-2010b3cab840
-r	java:S106t"+Replace this use of System.out by a logger.(­ùÞƒýÿÿÿÿ8ŽÅ¯¬ó1J$ceacc39d-ef3b-475c-bfe5-56230d8a2739
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8‚éå‡ó1J$ab4d2e4c-238f-4584-a079-19f4770f958e
+r	java:S106t"+Replace this use of System.out by a logger.(­ùÞƒýÿÿÿÿ8ŽÅ¯¬ó1J$02ef1a64-7a2d-4c62-9df4-e75b478c2b46
 ¾
-java:S6204ƒ"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(ª™¨¹8’ã¯¬ó1J$866f92eb-1a76-4db1-93db-d2f01d75296c
+java:S6204ƒ"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(ª™¨¹8’ã¯¬ó1J$9cc76006-5ec7-4e10-99b3-43d6d037d7be

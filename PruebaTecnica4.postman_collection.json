@@ -1,0 +1,785 @@
+{
+	"info": {
+		"_postman_id": "25a96a54-935e-4a41-8243-4fc363760e89",
+		"name": "PruebaTecnica4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24609534"
+	},
+	"item": [
+		{
+			"name": "createHotel",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Curricane\",\r\n    \"city\": \"Algeciras\",\r\n    \"itsReserved\": false\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/agency/hotels/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agency",
+						"hotels",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listHotels",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/agency/hotels",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agency",
+						"hotels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteHotel",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/agency/hotels/delete/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agency",
+						"hotels",
+						"delete",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditHotel",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/agency/hotels/edit/3?name=Barcelo&city=Malaga&itsReserved=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agency",
+						"hotels",
+						"edit",
+						"3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Barcelo"
+						},
+						{
+							"key": "city",
+							"value": "Malaga"
+						},
+						{
+							"key": "itsReserved",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByIdHotel",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/agency/hotels/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agency",
+						"hotels",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createRoom",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roomType\": \"Suite\",\r\n    \"pricePerNight\": 150.0,\r\n    \"availableFrom\": \"2022-01-01\",\r\n    \"availableTo\": \"2022-12-31\",\r\n    \"hotelId\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/agency/hotels/rooms/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agency",
+						"hotels",
+						"rooms",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteRoom",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/agency/hotels/rooms/delete/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agency",
+						"hotels",
+						"rooms",
+						"delete",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editRoom",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/agency/hotels/rooms/edit/1?roomType=Doble&pricePerNight=100.00&availableFrom=2023-01-01&availableTo=2023-12-31&hotelId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agency",
+						"hotels",
+						"rooms",
+						"edit",
+						"1"
+					],
+					"query": [
+						{
+							"key": "roomType",
+							"value": "Doble"
+						},
+						{
+							"key": "pricePerNight",
+							"value": "100.00"
+						},
+						{
+							"key": "availableFrom",
+							"value": "2023-01-01"
+						},
+						{
+							"key": "availableTo",
+							"value": "2023-12-31"
+						},
+						{
+							"key": "hotelId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listRoom",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/agency/hotels/rooms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agency",
+						"hotels",
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allRoomsAvilableFromTo",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/agency/rooms?dateFrom=15-02-2022&dateTo=20-02-2022&destination=Malaga&roomType=Suite",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agency",
+						"rooms"
+					],
+					"query": [
+						{
+							"key": "dateFrom",
+							"value": "15-02-2022"
+						},
+						{
+							"key": "dateTo",
+							"value": "20-02-2022"
+						},
+						{
+							"key": "destination",
+							"value": "Malaga"
+						},
+						{
+							"key": "roomType",
+							"value": "Suite"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createReservation",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"checkInDate\": \"2023-05-01\",\r\n  \"checkOutDate\": \"2023-05-10\",\r\n  \"roomType\": \"Suite\",\r\n  \"city\": \"Malaga\",\r\n  \"hosts\": {\r\n    \"id\": 1,\r\n    \"name\": \"John\",\r\n    \"surname\": \"Doe\",\r\n    \"age\": 30\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/agency/room-booking/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agency",
+						"room-booking",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteReservation",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/agency/room-booking/delete/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agency",
+						"room-booking",
+						"delete",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "newFlight",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"origin\": \"Malaga\",\r\n  \"destination\": \"Madrid\",\r\n  \"departureDate\": \"2024-05-01\",\r\n  \"returnDate\": \"2024-05-07\",\r\n  \"seats\": 150,\r\n  \"price\": 500.00,\r\n  \"airline\": \"Nombre de la aerolínea\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/agency/flights/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agency",
+						"flights",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllFlights",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/agency/flights",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agency",
+						"flights"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findFlightById",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/agency/flights/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agency",
+						"flights",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "flightDelete",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/agency/flights/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agency",
+						"flights",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editFlight",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/agency/flights/edit/2?departureCity=Paris&arrivalCity=Madrid&price=99&departureDate=2024-12-01&returnDate=2024-12-15&seats=200&airline=Iberia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agency",
+						"flights",
+						"edit",
+						"2"
+					],
+					"query": [
+						{
+							"key": "departureCity",
+							"value": "Paris"
+						},
+						{
+							"key": "arrivalCity",
+							"value": "Madrid"
+						},
+						{
+							"key": "price",
+							"value": "99"
+						},
+						{
+							"key": "departureDate",
+							"value": "2024-12-01"
+						},
+						{
+							"key": "returnDate",
+							"value": "2024-12-15"
+						},
+						{
+							"key": "seats",
+							"value": "200"
+						},
+						{
+							"key": "airline",
+							"value": "Iberia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByDateAndCities",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/agency/flights/byDatesAndCities?dateFrom=2024-12-01&dateTo=2024-12-15&origin=Paris&destination=Madrid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agency",
+						"flights",
+						"byDatesAndCities"
+					],
+					"query": [
+						{
+							"key": "dateFrom",
+							"value": "2024-12-01"
+						},
+						{
+							"key": "dateTo",
+							"value": "2024-12-15"
+						},
+						{
+							"key": "origin",
+							"value": "Paris"
+						},
+						{
+							"key": "destination",
+							"value": "Madrid"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "flightReservation",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numberOfPeople\": 2,\r\n    \"origin\": \"Paris\",\r\n    \"destination\": \"Madrid\",\r\n    \"departureDate\": \"2024-12-01\",\r\n    \"returnDate\": \"2024-12-15\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/agency/flight-booking/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agency",
+						"flight-booking",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listFlightReservation",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/agency/flight-booking/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agency",
+						"flight-booking",
+						"list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

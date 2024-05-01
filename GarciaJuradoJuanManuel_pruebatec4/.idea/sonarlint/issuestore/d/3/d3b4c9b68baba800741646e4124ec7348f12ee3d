@@ -1,5 +1,5 @@
 
-	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(¯°Î¥J$045fdb93-2844-43ef-9f02-710af6964f98
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(÷ô‹¹şÿÿÿÿJ$923e7e2f-93c7-41ec-822c-17cf31624ebd
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(¯°Î¥J$607dd34f-c0ec-4bdc-9300-4a328dc4bd84
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(÷ô‹¹şÿÿÿÿJ$ae8d5242-b154-4073-a7c3-e802769ccc4f
 ~
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞJ$580ee4a8-632e-44a5-a22a-b90d6ce964da
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞJ$43c3b711-2371-41d7-9625-6e15d023576c

@@ -1,15 +1,15 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(à‘ßæüÿÿÿÿ8ã•Õ¢ó1J$fdab284e-9b14-42a8-b512-0c7047f43bc5
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(à‘ßæüÿÿÿÿ8ã•Õ¢ó1J$d80fe27e-fd51-4fd0-9241-6233ce2bf96c
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ñ•Õ¢ó1J$7df7ac3a-294c-4e13-95ea-976bb0661f73
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ñ•Õ¢ó1J$cb66885e-9f90-47e9-b8a5-405e3a8df869
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ñ•Õ¢ó1J$c064e83e-ccf8-4c3f-a7c2-e498cb01c653
-r	java:S106."+Replace this use of System.out by a logger.(‹’±™ıÿÿÿÿ8ø•Õ¢ó1J$2e8dc676-b64b-427f-aa63-3fbb67acbf4c
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ñ•Õ¢ó1J$a0ce57da-88f2-4ff1-92a3-03d55ec340df
+r	java:S106."+Replace this use of System.out by a logger.(‹’±™ıÿÿÿÿ8ø•Õ¢ó1J$6e5812b5-03c2-4b66-853f-2ad70203c530
 n
-java:S1452P"&Remove usage of generic wildcard type.(ÆŸªïıÿÿÿÿ8–Õ¢ó1J$50438f28-cfdc-4976-98e9-4370ebf0a67b
+java:S1452P"&Remove usage of generic wildcard type.(ÆŸªïıÿÿÿÿ8–Õ¢ó1J$bde64c54-4274-4982-a086-29a667d19dde
 n
-java:S1452`"&Remove usage of generic wildcard type.(ÕŠ¿úÿÿÿÿ8¦üÖ¢ó1J$0791b0c8-b53e-46c7-9222-2b544d143b81
+java:S1452`"&Remove usage of generic wildcard type.(ÕŠ¿úÿÿÿÿ8¦üÖ¢ó1J$343a5ffb-040c-4f0c-bc99-d54df4c9b7a3
 i
-java:S1452g"&Remove usage of generic wildcard type.(€¹Ü8å†“£ó1J$09639171-c28b-4452-a4e1-c688ebb89564
+java:S1452g"&Remove usage of generic wildcard type.(€¹Ü8å†“£ó1J$1d6695f7-23e6-45e8-b04a-07b890292097
 n
-java:S1452s"&Remove usage of generic wildcard type.(ú¦–‰øÿÿÿÿ8°’‰­ó1J$4a122ab5-21fa-479c-9565-ed4ffe2d3c1c
+java:S1452s"&Remove usage of generic wildcard type.(ú¦–‰øÿÿÿÿ8°’‰­ó1J$28333f44-fc1b-4dcf-be72-081e02f8a022
