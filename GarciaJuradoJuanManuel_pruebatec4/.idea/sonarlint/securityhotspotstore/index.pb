@@ -57,10 +57,6 @@ g
 7GarciaJuradoJuanManuel_pruebatec4/pruebaTecnica/pom.xml,3\0\3034954cb97f581299b8910489c03f7ec9cd7997
 •
 uGarciaJuradoJuanManuel_pruebatec4/pruebaTecnica/src/main/java/AgenciaTurismo/pruebaTecnica/config/SecurityConfig.java,9\0\90159edbe2b766aefe3fe8f5c807a883ddb6ad04
-ú
-lGarciaJuradoJuanManuel_pruebatec4/pruebaTecnica/src/test/java/AgenciaTurismo/pruebaTecnica/NewHotelTest.java,5\5\55540510bb27e74a202c64cff32070cf94420846
-ù
-mGarciaJuradoJuanManuel_pruebatec4/pruebaTecnica/src/test/java/AgenciaTurismo/pruebaTecnica/NewFlightTest.java,f\1\f104249084b601a5ce1fbda124c9ce4a2aa1527d
 §
 tGarciaJuradoJuanManuel_pruebatec4/pruebaTecnica/src/test/java/AgenciaTurismo/pruebaTecnica/FlightControllerTest.java,c\7\c7740addfd36686c52aa87035717435191067aa5
 ™

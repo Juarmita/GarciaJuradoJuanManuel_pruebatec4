@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @RequestMapping(value = "/agency", produces = MediaType.APPLICATION_JSON_VALUE)//Indico que el controlador solo devolvera JSON. I indicate that the controller will only return JSON.
@@ -71,14 +72,15 @@ public class ReservationController {
             // Guardar la reserva. Save the reservation.
             roomReservationService.saveRoomReservation(roomReservation);
 
-            //Calcula el costo total. Calculate the total cost
-            long diff = bookingDto.getCheckOutDate().getTime() - bookingDto.getCheckInDate().getTime();
-            double totalCost = diff * room.getPricePerNight();
+            //Calcular el coste total de la reserva. Calculate the total cost of the reservation.
+            long diffInMilli = bookingDto.getCheckOutDate().getTime() - bookingDto.getCheckInDate().getTime();//Calculo de la diferencia en milisegundos. Calculation of the difference in milliseconds.
+            long diffInDays = TimeUnit.MILLISECONDS.toDays(diffInMilli);//Conversion de milisegundos a dias. Conversion from milliseconds to days
+            double totalCost = diffInDays * room.getPricePerNight();//Calculo del coste total. Calculation of the total cost.
 
-            //Creo un objeto de respuesta. Create a response object.
+            // Crear un mapa con la reserva y el coste total. Create a map with the reservation and the total cost.
             Map<String, Object> response = new HashMap<>();
-                    response.put("reservation", roomReservation);
-                    response.put("totalCost", totalCost);
+            response.put("reservation", roomReservation);
+            response.put("totalCost", totalCost);
 
 
             // Retornar la reserva creada con el coste. Return the created reservation with the cost.
