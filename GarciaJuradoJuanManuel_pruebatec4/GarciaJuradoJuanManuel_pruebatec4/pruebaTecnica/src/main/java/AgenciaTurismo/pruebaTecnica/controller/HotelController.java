@@ -26,6 +26,12 @@ public class HotelController {
     @Autowired
     private IRoomService roomService;
 
+    @Autowired//Inyeccion de dependencias, necesaria en el TEST. Dependency injection, necessary in the TEST
+    public HotelController(IHotelService hotelServ) {
+        this.hotelServ = hotelServ;
+        this.roomService = roomService;
+    }
+
     //-----------------------------------Hotels-----------------------------------
 
     //CRUD para los hoteles. CRUD for hotels
@@ -50,7 +56,7 @@ public class HotelController {
     @PutMapping("/hotels/edit/{id}")//Editar un hotel por su id. Edit a hotel by its id
     public ResponseEntity<Hotel> updateHotel(@PathVariable Long id, @RequestParam("name") String nameModif, @RequestParam("city") String cityModif, @RequestParam("itsReserved") boolean itsReservedModif) {
 
-        //Look for the hotel by id
+        //Buscar el hotel por su id. Look for the hotel by id
         Hotel hotel = hotelServ.findById(id);
         if (hotel == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -77,9 +83,15 @@ public class HotelController {
     }
 
     @DeleteMapping("/hotels/delete/{id}")
-    public ResponseEntity<HttpStatus> deleteHotel(@PathVariable Long id) {
+    public ResponseEntity<?> deleteHotel(@PathVariable Long id) {
+
+        //Buscar el hotel por su id. Look for the hotel by id
+        Hotel hotel = hotelServ.findById(id);
+        if (hotel == null) {
+            return new ResponseEntity<>("Hotel not found", HttpStatus.NOT_FOUND);
+        }
         hotelServ.deleteHotel(id);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>("Hotel deleted",HttpStatus.OK);
     }
 
     //-----------------------------------Rooms-----------------------------------
@@ -87,21 +99,23 @@ public class HotelController {
 
     //Crear una habitacion en un hotel. Create a room in a hotel
     @PostMapping("/hotels/rooms/new")//Crear una habitacion en un hotel. Create a room in a hotel
-    public ResponseEntity<Void> createRoom(@RequestBody NewRoomDTO room) {
+    public ResponseEntity<?> createRoom(@RequestBody NewRoomDTO room) {
         roomService.saveRoom(room);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseEntity<>("Room created succesfully",HttpStatus.CREATED);
     }
 
     //Eliminar una habitacion por su id. Delete a room by its id
     @DeleteMapping("/hotels/rooms/delete/{id}")//Eliminar una habitacion por su id. Delete a room by its id
-    public ResponseEntity<Void> deleteRoom(@PathVariable Long id) {
+    public ResponseEntity<?> deleteRoom(@PathVariable Long id) {
+
+
         roomService.deleteRoom(id);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>("Room deleted", HttpStatus.OK);
     }
 
     //Obtener una habitacion por su id. Get a room by its id
     @PutMapping("/hotels/rooms/edit/{id}")//Editar una habitacion por su id. Edit a room by its id
-    public ResponseEntity<Void> updateRoom(
+    public ResponseEntity<?> updateRoom(
             @PathVariable Long id,
             @RequestParam("roomType") String roomTypeModif,
             @RequestParam("pricePerNight") double pricePerNightModif,
@@ -112,7 +126,7 @@ public class HotelController {
         //Look for the room by id
         Room room = roomService.findById(id);
         if (room == null) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>("Room not found", HttpStatus.NOT_FOUND);
         }
 
         //Update the room
@@ -122,7 +136,7 @@ public class HotelController {
         room.setAvailableTo(availableToModif);
 
         roomService.updateRoomById(id, room);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>("Room Updated", HttpStatus.OK);
     }
 
     //Obtener todas las habitaciones. Get all rooms
@@ -141,6 +155,8 @@ public class HotelController {
             @RequestParam("destination") String city) {
         return roomService.getAvailableRooms(availableFrom, availableTo, roomType, city);
     }
+
+
 
 
 }

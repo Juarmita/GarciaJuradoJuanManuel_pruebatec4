@@ -1,5 +1,6 @@
 package AgenciaTurismo.pruebaTecnica.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,13 +22,18 @@ public class Flight implements Serializable {
     private Long id;
     private String origin;
     private String destination;
-    private String classType;
     private double price;
-    @Temporal(TemporalType.DATE)//Se define el tipo de dato de la fecha. The type of the date is defined
+    @Column(name = "departure_date")
+    @Temporal(TemporalType.DATE)
     private Date departureDate;
+
+    @Column(name = "return_date")
     @Temporal(TemporalType.DATE)
     private Date returnDate;
+    private Integer seats;
+    private String airline;
 
+    @JsonManagedReference(value = "flight-reservation")//Se define el nombre de la referencia. The name of the reference is defined.
     @OneToMany(mappedBy = "flight")//Relacion de uno a muchos. One to many relationship. Un vuelo puede tener muchas reservas. A flight can have many reservations.
     private List<FlightReservation> flightReservation;
 

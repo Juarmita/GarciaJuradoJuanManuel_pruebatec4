@@ -99,15 +99,23 @@ public class RoomService implements IRoomService {
     }
 
 
-
+    //Metodo para obtener todas las habitaciones disponibles en una ciudad para un rango de fechas y un tipo de habitacion
     public List<Room> getAvailableRooms(Date checkInDate, Date checkOutDate, String roomType, String city) {
-   List<Room> rooms = roomRepo.findByRoomTypeAndHotel_City(roomType, city);
+        List<Room> rooms = roomRepo.findByRoomTypeAndHotel_City(roomType, city);
+
+        if (rooms.isEmpty()) {
+            throw new RuntimeException("Not rooms found of type: " + roomType + " in " + city + " for the date range selected");
+        }
 
         List<Room> availableRooms = new ArrayList<>();
         for (Room room : rooms) {
             if (isRoomAvailable(room, checkInDate, checkOutDate)) {
                 availableRooms.add(room);
             }
+        }
+
+        if (availableRooms.isEmpty()) {
+            throw new RuntimeException("There are no available rooms of type " + roomType + " in the city " + city + " for the selected dates");
         }
 
         return availableRooms;

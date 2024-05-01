@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface HotelRepository extends JpaRepository<Hotel, Long> {
     List<Hotel> findByCity(String city);//Metodo para obtener todos los hoteles por ciudad. Method to get all hotels by city
+
 }

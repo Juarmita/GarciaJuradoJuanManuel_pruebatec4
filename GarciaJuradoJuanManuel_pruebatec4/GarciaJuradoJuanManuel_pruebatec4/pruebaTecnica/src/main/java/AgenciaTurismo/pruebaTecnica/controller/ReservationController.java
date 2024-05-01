@@ -31,27 +31,27 @@ public class ReservationController {
     @PostMapping(value = "/room-booking/new", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> createBooking(@RequestBody NewRoomReservationDTO bookingDto) {
         try {
-            // Validate the dates
+            //Verificar que la fecha de check-in sea anterior a la fecha de check-out. Verify that the check-in date is before the check-out date.
             if (bookingDto.getCheckInDate().after(bookingDto.getCheckOutDate())) {
                 throw new RuntimeException("Check-in date must be before check-out date");
             }
 
-            // Search for available rooms that match the room type and city
+            //Buscar las habitaciones disponibles en la ciudad seleccionada para las fechas seleccionadas. Search for available rooms in the selected city for the selected dates.
             List<Room> availableRooms = roomService.getAvailableRooms(bookingDto.getCheckInDate(), bookingDto.getCheckOutDate(), bookingDto.getRoomType(), bookingDto.getCity());
 
-            // If there are no available rooms, return an error message
+            // Si no hay habitaciones disponibles, retornar un mensaje de error. If there are no available rooms, return an error message.
             if (availableRooms.isEmpty()) {
                 return new ResponseEntity<>("No rooms available in the selected city for the selected dates", HttpStatus.NOT_FOUND);
             }
 
-            // Create the reservation with the first available room
+            // Tomar la primera habitación disponible. Take the first available room.
             Room room = availableRooms.get(0);
-            Hosts host = bookingDto.getHosts(); // Use the Hosts object from the bookingDto
+            Hosts host = bookingDto.getHosts(); //Uso del objeto hosts. Use the Hosts object from the bookingDto
 
-            // Save the host
+            // Guardar el host. Save the host.
             hostsService.saveHost(host);
 
-            // Verify the room's availability
+            // Verificar si la habitación ya está reservada para las fechas seleccionadas. Check if the room is already booked for the selected dates.
             for (RoomReservation existingReservation : room.getRoomReservation()) {
                 if (existingReservation.getCheckIn().before(bookingDto.getCheckOutDate()) && existingReservation.getCheckOut().after(bookingDto.getCheckInDate())) {
                     return new ResponseEntity<>("Room is not available for the selected dates", HttpStatus.BAD_REQUEST);
@@ -66,10 +66,10 @@ public class ReservationController {
             roomReservation.setCity(bookingDto.getCity());
             roomReservation.setHosts(host);
 
-            // Save the reservation
+            // Guardar la reserva. Save the reservation.
             roomReservationService.saveRoomReservation(roomReservation);
 
-            // Return the created reservation
+            // Retornar la reserva creada. Return the created reservation.
             return new ResponseEntity<>(roomReservation, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);

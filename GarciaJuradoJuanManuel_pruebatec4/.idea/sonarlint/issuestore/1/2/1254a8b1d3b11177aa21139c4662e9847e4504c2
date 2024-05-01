@@ -1,0 +1,12 @@
+
+ˆ	java:S112X"FDefine and throw a dedicated exception instead of using a generic one.(¹Üõá8—Ìí‡ó1J$052cf5db-0e4c-40ef-ba9b-06387249ee4a
+«
+java:S1488x"cImmediately return this expression instead of assigning it to the temporary variable "bookingDTOs".(šÞˆ¶ÿÿÿÿÿ8ìÄ¯¬ó1J$141047ab-07ba-4785-9ffd-11a1947af0df
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(÷ô‹¹þÿÿÿÿ8¿ÔÈ‡ó1J$8c056129-75f8-46e1-82ad-12b0d3fa5d3c
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8ÌÔÈ‡ó1J$01e9dbbd-ced2-46c6-8d20-11386a487da9
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8‚éå‡ó1J$9bb31f84-a90a-45e7-97d1-5a8883e3749d
+r	java:S106t"+Replace this use of System.out by a logger.(­ùÞƒýÿÿÿÿ8ŽÅ¯¬ó1J$09b00635-7934-41c2-90e6-1f3f3736562f
+¾
+java:S6204ƒ"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(ª™¨¹8’ã¯¬ó1J$803c1b68-81b3-404d-824b-c735be98275b

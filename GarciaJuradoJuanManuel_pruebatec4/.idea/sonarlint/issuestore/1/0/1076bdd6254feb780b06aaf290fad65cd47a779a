@@ -1,8 +1,11 @@
 
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(÷ô‹¹şÿÿÿÿJ$7d061aa5-4b50-400c-b781-05aa7dcb4a3c
+	java:S1125"FDefine and throw a dedicated exception instead of using a generic one.(¬ıÇ±üÿÿÿÿ8ŒÑã£ó1J$63ac5f79-8712-4f9e-b8ed-f8e3ca0e4b29
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(÷ô‹¹şÿÿÿÿJ$91f02fd5-e1e7-4718-b644-568b79b68e42
 Œ
-java:S3655C"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(õ¦şËJ$a87ece8e-5f1a-401e-9cf0-d20c50e46d84
+java:S3655L"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(õ¦şËJ$8e89e4a5-46cc-430a-9048-7b03ed438632
 ~
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞJ$dd8e2ca7-1133-46bd-908f-af7f5b6aa392
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞJ$e5cd96c3-2e7d-46eb-a8bf-a4610c087c22
 ~
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞJ$222baf43-2d1d-4bd7-8ff2-31740738b677
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞJ$4c028d0a-a7cd-41bb-ad48-cb80464a5fda
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8äÆè£ó1J$471f4016-d308-4bec-b622-b29d0803d9a4

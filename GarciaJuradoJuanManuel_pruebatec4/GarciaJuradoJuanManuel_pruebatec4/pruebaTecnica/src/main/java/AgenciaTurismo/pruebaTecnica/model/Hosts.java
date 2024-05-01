@@ -32,7 +32,7 @@ public class Hosts {
     @OneToMany(mappedBy = "hosts")//Relacion de uno a muchos. One to many relationship. Un anfitrion puede tener muchas reservas de habitacion. A host can have many room reservations.
     private List<RoomReservation> roomReservation;//Relacion de uno a muchos. One to many relationship. Un anfitrion puede tener muchas reservas de vuelo. A host can have many flight reservations.
 
-    @JsonManagedReference(value = "flight-reservation")
+    @JsonManagedReference(value = "hostFlight-reservation")
     @OneToMany(mappedBy = "hosts")//Relacion de uno a muchos. One to many relationship. Un anfitrion puede tener muchas reservas de vuelo. A host can have many flight reservations.
     private List<FlightReservation> flightReservation;//Relacion de uno a muchos. One to many relationship. Un anfitrion puede tener muchas reservas de vuelo. A host can have many flight reservations.
 }

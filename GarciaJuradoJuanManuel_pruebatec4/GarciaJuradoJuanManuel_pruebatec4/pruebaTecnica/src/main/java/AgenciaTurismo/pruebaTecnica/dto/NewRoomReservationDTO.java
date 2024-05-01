@@ -16,7 +16,7 @@ import java.util.Date;
 public class NewRoomReservationDTO implements Serializable {
     private int hostsQuantity;
     private Hosts hosts;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")//Formato de fecha. Date format.
     private Date checkInDate;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date checkOutDate;

@@ -10,4 +10,5 @@ public interface IReservationService {
     RoomReservation getRoomReservation(Long id);
     List<RoomReservation> getAllRoomReservations();
     boolean existsRoomReservation(Long id);
+
 }
