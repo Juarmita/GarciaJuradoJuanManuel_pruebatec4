@@ -28,7 +28,7 @@ Para no hacer tan larga esta parte del readme voy a explicar los metodos de form
 
 Se han realizado test a traves de postman.
 
-Tambien se ha realizado sobre la creacion de hoteles un test con JUnit el cual ha pasado satisfactoriamente.
+Tambien se ha realizado sobre la creacion de vuelos un test con JUnit el cual ha pasado satisfactoriamente.
 
 
 ## Supuestos
