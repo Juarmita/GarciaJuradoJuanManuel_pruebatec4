@@ -28,7 +28,7 @@ Para no hacer tan larga esta parte del readme voy a explicar los metodos de form
 
 Se han realizado test a traves de postman.
 
-Tambien se ha realizado sobre la creacion de vuelos un test con JUnit el cual ha pasado satisfactoriamente.
+Tambien se ha realizado sobre la creacion de hoteles un test con JUnit el cual ha pasado satisfactoriamente.
 
 
 ## Supuestos
@@ -65,6 +65,9 @@ Tambien se ha realizado sobre la creacion de vuelos un test con JUnit el cual ha
 - [Stream y filter](https://codingfactsblog.wordpress.com/2017/08/01/jugando-con-streams-y-predicates-en-java/)
 - [JPA](https://github.com/juanmacintas/tallerJPASpringData)
 - [Recursion](https://www.youtube.com/watch?v=GaCBrMvgY2A)
+- [TimeUnit](https://www.geeksforgeeks.org/timeunit-class-in-java-with-examples/)
+- [TimeUnit](https://www.w3resource.com/java-exercises/datetime/java-datetime-exercise-38.php)
+- [TimeUnit](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/TimeUnit.html)
 
 ## Authors
 
