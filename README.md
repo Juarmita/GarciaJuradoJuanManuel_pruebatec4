@@ -41,6 +41,18 @@ Tambien se ha realizado sobre la creacion de hoteles un test con JUnit el cual h
 
 
 
+## Appendix
+
+Para el acceso a las peticiones que necesitan autorización los tados son los siguientes:
+- Usuario: admin
+- Contraseña: 1234
+
+Para la documentación hemos usado Swagger. Adjunto el link de swagger:
+http://localhost:8080/doc/swagger-ui.html
+
+Recordar que debe de estar en marcha la api para que el enlace funcione.
+
+
 ## Ejecucion
 
 - Clona el repositorio en el direcorio que desees.
